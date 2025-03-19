@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İngiliscə-Azərbaycanca </title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 45px; }
+        p {
+  color: green;
+font-weight: bold;
+font-size:55px;
+  text-align: center;
+}
+        #nameDisplay { font-size: 45px;color:#800080; margin: 80px 0; font-weight: bold; }
+        button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <p>İngiliscə-Azərbaycanca B1</p>
+    <div id="nameDisplay">Başla!</div>
+    <button onclick="generateName()">Növbəti söz</button>
+
+    <script>
+        const firstNames = ["	actually	-	əslində 	"	,
+"	adopt	-	qəbul etmək	"	,
+"	almost	-	az qala	"	,
+"	amaze	-	heyrətamiz	"	,
+"	awesome	-	əla	"	,
+"	awful	-	dəhşətli        	"	,
+"	beg	-	yalvarmaq	"	,
+"	behind	-	arxasında	"	,
+"	bitch	-	qancıq	"	,
+"	blame	-	günahlandırmaq	"	,
+"	blow	-	əsmək-zərbə   	"	,
+"	bowl	-	qab	"	,
+"	brain	-	beyin	"	,
+"	bunch	-	dəstə   	"	,
+"	consider	-	nəzərə alın	"	,
+"	crap	-	axmaqcasına	"	,
+"	cure 	-	müalicə 	"	,
+"	damn	-	lənət	"	,
+"	deal	-	sövdələşmə	"	,
+"	deny	-	inkar etmək	"	,
+"	deserve	-	layiq olmaq	"	,
+"	drop	-	düşmək	"	,
+"	even	-	hətta	"	,
+"	except	-	istisna olmaqla         	"	,
+"	excite	-	həyəcanlanmaq	"	,
+"	expect	-	gözləmək	"	,
+"	fail	-	uğursuz	"	,
+"	fair	-	ədalətli	"	,
+"	figure	-	xadim	"	,
+"	folks	-	dostlar	"	,
+"	giant	-	nəhəng	"	,
+"	grab	-	tutmaq-yaxalamaq	"	,
+"	guess	-	təxmin et 	"	,
+"	handle	-	tutmaq	"	,
+"	hire	-	işə götürmək	"	,
+"	hit	-	vurmaq	"	,
+"	holy	-	müqəddəs	"	,
+"	huge	-	nəhəng	"	,
+"	impress	-	heyran etmək	"	,
+"	insane	-	ağılasığmaz	"	,
+"	insist	-	israr etmək	"	,
+"	inspire	-	ruhlandırmaq	"	,
+"	issue	-	məsələ	"	,
+"	lean	-	arıq	"	,
+"	mad	-	dəli    	"	,
+"	melt	-	ərimək	"	,
+"	mention	-	qeyd etmək	"	,
+"	naked	-	çılpaq  	"	,
+"	notice	-	bildiriş	"	,
+"	obey	-	itaət etmək	"	,
+"	obviously	-	açıq-aydın	"	,
+"	offend	-	incitmək	"	,
+"	pee	-	işəmək	"	,
+"	perhaps	-	bəlkə	"	,
+"	piece	-	parça	"	,
+"	pleasure	-	zövq    	"	,
+"	plenty	-	bol	"	,
+"	pretend	-	iddia etmək     	"	,
+"	probably	-	yəqin ki	"	,
+"	prove	-	sübut etmək	"	,
+"	purchase	-	alış-veriş	"	,
+"	raise	-	qaldırmaq	"	,
+"	rare	-	nadirən	"	,
+"	rather	-	daha doğrusu	"	,
+"	realize	-	dərk etmək	"	,
+"	regret	-	peşmançılıq	"	,
+"	rely	-	güvənmək	"	,
+"	remind	-	xatırlatmaq	"	,
+"	resolve	-	həll etmək	"	,
+"	rid	-	qurtarmaq	"	,
+"	ridiculous	-	gülünc	"	,
+"	rush	-	tələsmək	"	,
+"	satisfy	-	qane etmək	"	,
+"	screw	-	bolt	"	,
+"	sense	-	mənada	"	,
+"	shut	-	bağlamaq        	"	,
+"	spirit	-	ruh     	"	,
+"	stuff	-	əşyalar	"	,
+"	suit	-	kostyum	"	,
+"	suppose	-	güman edək	"	,
+"	surgery	-	cərrahiyyə	"	,
+"	swear	-	and iç	"	,
+"	swear	-	and içmək	"	,
+"	treat 	-	müalicə etmək	"	,
+"	trick	-	hiylə	"	,
+"	unless	-	istisna olmaqla	"	,
+"	upset	-	qanı-qara-dilxor	"	,
+"	weird	-	qəribə	"	,
+"	whole	-	bütöv	"	,
+"	wonder	-	heyrət-maraq	"	,
+"	worth	-	dəyər	"	,
+"	yell	-	qışqırmaq	"	,
+"careless-diqqətsiz "];
+        const lastNames = ["Coca-Cola", "Fanta", "Pepsi", "Kompot", "Qızıl quyu", "RedBull"];
+
+        function generateName() {
+            const ad = firstNames[Math.floor(Math.random() * firstNames.length)];
+            const soyad = lastNames[Math.floor(Math.random() * lastNames.length)];
+            document.getElementById("nameDisplay").textContent = ad ;
+        }
+    </script>
+
+</body>
+</html>
