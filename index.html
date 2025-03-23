@@ -1,129 +1,100 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İngiliscə-Azərbaycanca </title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 45px; }
-        p {
-  color: green;
-font-weight: bold;
-font-size:55px;
-  text-align: center;
-}
-        #nameDisplay { font-size: 45px;color:#800080; margin: 80px 0; font-weight: bold; }
-        button { padding: 10px 20px; font-size: 18px; cursor: pointer; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cümlə qurucu</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: #f0f0f0; text-align: center; padding: 30px; }
+  .game-container { background: #fff; padding: 20px; border-radius: 15px; max-width: 700px; margin: auto; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+  .word { display: inline-block; background-color: #007bff; color: white; padding: 12px; border-radius: 8px; margin: 5px; cursor: pointer; }
+  .word:hover { background-color: #0056b3; }
+  #sentence { margin-top: 20px; min-height: 50px; padding: 10px; background: #eee; border-radius: 10px; }
+  #result { margin-top: 20px; font-size: 18px; }
+  button { padding: 12px 25px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+  button:hover { background-color: #218838; }
+</style>
 </head>
 <body>
+<div class="game-container">
+  <h2>🇬🇧 İngiliscə cümlə qur 🇦🇿</h2>
+  <div id="words"></div>
+  <div id="sentence">Cümləni qur: </div>
+  <div id="result"></div>
+  <button onclick="checkSentence()">Yoxla</button>
+  <button onclick="nextSentence()">Növbəti</button>
+  <h4> © O.Ibrahimzadə </h4>
+  
+  
+</div>
 
-    <p>İngiliscə-Azərbaycanca B1</p>
-    <div id="nameDisplay">Başla!</div>
-    <button onclick="generateName()">Növbəti söz</button>
+<script>
+const sentences = [
+   { en: "I am learning English" },
+  { en: "The weather is sunny today" },
+  { en: "She reads a book" },
+   { en: "He drives a bike" },
+   { en: "We have a picnic" },
+   { en: "We live in London" },
+   { en: "I clean my room" },
+   { en: "She helps her mother" },
+   { en: "We like summer" },
+   { en: "He works in an office" },
+   { en: "He makes breakfast" },
+   { en: "She goes to school" },
+   { en: "He goes to bed early" },
+   { en: "I listen to music" },
+   { en: "They are in the garden" },
+   { en: "They watch movies" },
+   { en: "I take a shower" },
+   { en: "We visit the park" },
+   { en: "They live near the school" },
+   { en: "We eat dinner at 7 PM" },
+   { en: "They play football" },
+   { en: "She loves chocolate" },
+   { en: "I walk to work" },
+   { en: "They visit their grandparents" },
+   { en: "She wears a red dress" },
+   { en: "She is my friend" },
+   { en: "She calls her friend" },
+   { en: "We make lunch together" },
+   { en: "I love my family" },
+   { en: "He draws pictures" },
+  { en: "We are going to school" }
+];
 
-    <script>
-        const firstNames = ["	actually	-	əslində 	"	,
-"	adopt	-	qəbul etmək	"	,
-"	almost	-	az qala	"	,
-"	amaze	-	heyrətamiz	"	,
-"	awesome	-	əla	"	,
-"	awful	-	dəhşətli        	"	,
-"	beg	-	yalvarmaq	"	,
-"	behind	-	arxasında	"	,
-"	bitch	-	qancıq	"	,
-"	blame	-	günahlandırmaq	"	,
-"	blow	-	əsmək-zərbə   	"	,
-"	bowl	-	qab	"	,
-"	brain	-	beyin	"	,
-"	bunch	-	dəstə   	"	,
-"	consider	-	nəzərə alın	"	,
-"	crap	-	axmaqcasına	"	,
-"	cure 	-	müalicə 	"	,
-"	damn	-	lənət	"	,
-"	deal	-	sövdələşmə	"	,
-"	deny	-	inkar etmək	"	,
-"	deserve	-	layiq olmaq	"	,
-"	drop	-	düşmək	"	,
-"	even	-	hətta	"	,
-"	except	-	istisna olmaqla         	"	,
-"	excite	-	həyəcanlanmaq	"	,
-"	expect	-	gözləmək	"	,
-"	fail	-	uğursuz	"	,
-"	fair	-	ədalətli	"	,
-"	figure	-	xadim	"	,
-"	folks	-	dostlar	"	,
-"	giant	-	nəhəng	"	,
-"	grab	-	tutmaq-yaxalamaq	"	,
-"	guess	-	təxmin et 	"	,
-"	handle	-	tutmaq	"	,
-"	hire	-	işə götürmək	"	,
-"	hit	-	vurmaq	"	,
-"	holy	-	müqəddəs	"	,
-"	huge	-	nəhəng	"	,
-"	impress	-	heyran etmək	"	,
-"	insane	-	ağılasığmaz	"	,
-"	insist	-	israr etmək	"	,
-"	inspire	-	ruhlandırmaq	"	,
-"	issue	-	məsələ	"	,
-"	lean	-	arıq	"	,
-"	mad	-	dəli    	"	,
-"	melt	-	ərimək	"	,
-"	mention	-	qeyd etmək	"	,
-"	naked	-	çılpaq  	"	,
-"	notice	-	bildiriş	"	,
-"	obey	-	itaət etmək	"	,
-"	obviously	-	açıq-aydın	"	,
-"	offend	-	incitmək	"	,
-"	pee	-	işəmək	"	,
-"	perhaps	-	bəlkə	"	,
-"	piece	-	parça	"	,
-"	pleasure	-	zövq    	"	,
-"	plenty	-	bol	"	,
-"	pretend	-	iddia etmək     	"	,
-"	probably	-	yəqin ki	"	,
-"	prove	-	sübut etmək	"	,
-"	purchase	-	alış-veriş	"	,
-"	raise	-	qaldırmaq	"	,
-"	rare	-	nadirən	"	,
-"	rather	-	daha doğrusu	"	,
-"	realize	-	dərk etmək	"	,
-"	regret	-	peşmançılıq	"	,
-"	rely	-	güvənmək	"	,
-"	remind	-	xatırlatmaq	"	,
-"	resolve	-	həll etmək	"	,
-"	rid	-	qurtarmaq	"	,
-"	ridiculous	-	gülünc	"	,
-"	rush	-	tələsmək	"	,
-"	satisfy	-	qane etmək	"	,
-"	screw	-	bolt	"	,
-"	sense	-	mənada	"	,
-"	shut	-	bağlamaq        	"	,
-"	spirit	-	ruh     	"	,
-"	stuff	-	əşyalar	"	,
-"	suit	-	kostyum	"	,
-"	suppose	-	güman edək	"	,
-"	surgery	-	cərrahiyyə	"	,
-"	swear	-	and iç	"	,
-"	swear	-	and içmək	"	,
-"	treat 	-	müalicə etmək	"	,
-"	trick	-	hiylə	"	,
-"	unless	-	istisna olmaqla	"	,
-"	upset	-	qanı-qara-dilxor	"	,
-"	weird	-	qəribə	"	,
-"	whole	-	bütöv	"	,
-"	wonder	-	heyrət-maraq	"	,
-"	worth	-	dəyər	"	,
-"	yell	-	qışqırmaq	"	,
-"careless-diqqətsiz "];
-        const lastNames = ["Coca-Cola", "Fanta", "Pepsi", "Kompot", "Qızıl quyu", "RedBull"];
+let correctSentence = "";
+let userSentence = [];
 
-        function generateName() {
-            const ad = firstNames[Math.floor(Math.random() * firstNames.length)];
-            const soyad = lastNames[Math.floor(Math.random() * lastNames.length)];
-            document.getElementById("nameDisplay").textContent = ad ;
-        }
-    </script>
+function nextSentence() {
+  userSentence = [];
+  document.getElementById('result').innerText = "";
+  const random = sentences[Math.floor(Math.random() * sentences.length)];
+  correctSentence = random.en;
+  const words = random.en.split(" ").sort(() => 0.5 - Math.random());
 
+  const wordsHTML = words.map(word =>
+    `<div class="word" onclick="addWord('${word}')">${word}</div>`
+  ).join("");
+
+  document.getElementById('words').innerHTML = wordsHTML;
+  document.getElementById('sentence').innerText = "Cümləni qur: ";
+}
+
+function addWord(word) {
+  userSentence.push(word);
+  document.getElementById('sentence').innerText = "Cümləni qur: " + userSentence.join(" ");
+}
+
+function checkSentence() {
+  if (userSentence.join(" ") === correctSentence) {
+    document.getElementById('result').innerText = "✅ Doğru!";
+  } else {
+    document.getElementById('result').innerText = `❌ Səhv! Düzgün cümlə: "${correctSentence}"`;
+  }
+}
+
+nextSentence();
+</script>
 </body>
 </html>
