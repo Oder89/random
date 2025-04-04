@@ -1,89 +1,304 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cümlə qurucu</title>
-<style>
-  body { font-family: Arial, sans-serif; background-color: #f0f0f0; text-align: center; padding: 30px; }
-  .game-container { background: #fff; padding: 20px; border-radius: 15px; max-width: 700px; margin: auto; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
-  .word { display: inline-block; background-color: #007bff; color: white; padding: 12px; border-radius: 8px; margin: 5px; cursor: pointer; }
-  .word:hover { background-color: #0056b3; }
-  #sentence { margin-top: 20px; min-height: 50px; padding: 10px; background: #eee; border-radius: 10px; }
-  #result { margin-top: 20px; font-size: 18px; }
-  button { padding: 12px 25px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 10px; cursor: pointer; margin-top: 20px; }
-  button:hover { background-color: #218838; }
-</style>
-</head>
-<body>
-<div class="game-container">
-  <h2>🇷🇺 Rus dilində cümlə 🇦🇿</h2>
-  <div id="words"></div>
-  <div id="sentence">Cümləni qur: </div>
-  <div id="result"></div>
-  <button onclick="checkSentence()">Yoxla</button>
-  <button onclick="nextSentence()">Növbəti</button>
-  <h4> © O.Ibrahimzadə </h4>
-  
-  
-</div>
+﻿
+<!doctype html>
+<html lang="az">
+    <head>
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width"/>
+        <title>Xidmətlər | İcbari Sığorta Bürosu</title>
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://services.isb.az/css/bundle.min.css?id=2b2ea3d3e34c1ddc3055" />
+        <meta name="csrf-token" content="bH6mAbUbTAr9n6mdeQt84bNdVOl6TAl41u5ocB2k">
+        <meta name="theme-color" content="#015985" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="googlebot" content="index, archive" />
+        <meta name="googlebot" content="all" />
+        <meta name="yahoobot" content="index,follow" />
+        <meta name="alexabot" content="index,follow" />
+        <meta name="msnbot" content="index,follow" />
+        <meta name="dmozbot" content="index,follow" />
+        <meta name="revisit-after" content="1 days" />
+        <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+        <link rel="dns-prefetch" href="//google-analytics.com" />
+        <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Xidmətlər | İcbari Sığorta Bürosu" />
+        <meta property="og:description" content="İcbari Sığorta Müqavilələrinin mövcudluğunun yoxlanılması" />
+        <meta property="og:url" content="https://services.isb.az/" />
+        <meta property="og:site_name" content="Xidmətlər | İcbari Sığorta Bürosu" />
+        <meta property="og:image" content="https://services.isb.az/images/default.png" />
+        <meta property="og:image:secure_url" content="https://services.isb.az/images/default.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:domain" content="isb.az" />
+        <meta name="twitter:title" content="Xidmətlər | İcbari Sığorta Bürosu" />
+        <meta name="twitter:description" content="İcbari Sığorta Müqavilələrinin mövcudluğunun yoxlanılması" />
+        <meta name="twitter:image" content="https://services.isb.az/images/default.png" />
+    </head>
+    <body class="col-lg-10 col-md-12 col-lg-offset-1 m-auto">
+    <input id="token" value="bH6mAbUbTAr9n6mdeQt84bNdVOl6TAl41u5ocB2k" type="hidden">
+    <header class="mb-3" id="header" style="background: #FFFFFF;">
+        <div class="container-outer" style="margin-bottom: 0px; padding-top:2em">
+            <div class="row">
+                <div class="col-lg-4" align="center">
+                    <a href="https://services.isb.az">
+                        <img src="https://services.isb.az/images/logo.png" alt="" width="150" height="90">
+                    </a>
+                </div>
+                <div class="col-lg-8" style="vertical-align: central; text-align: center; float:left; position: relative">
+                    <h4 class="isb-header">İCBARİ SIĞORTA MÜQAVİLƏLƏRİNİN MÖVCUDLUĞUNUN YOXLANILMASI</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-outer">
+        <div class="row">
+            <div class="navigation col-md-4 order-md-0 order-sm-last">
+                <div class="menu-outer">
+                                                            <div class="menu expandable active opened">
+                        <div class="menu-inner"><img src="https://services.isb.az/images/cmtplicon.png" alt="">İcbari avtoməsuliyyət sığortası</div>
+                        <div class="sub-menus">
+                            <div class="menu active">
+                                <a href="https://services.isb.az/cmtpl/checkValidity"><div class="menu-inner">Sığorta müqaviləsini yoxla</div></a>
+                            </div>
+                            <div class="menu ">
+                                <a href="https://services.isb.az/cmtpl/findInsurer"><div class="menu-inner">Hadisə tarixinə sığorta müqaviləsini yoxla</div></a>
+                            </div>
+                            <div class="menu ">
+                                <a href="https://services.isb.az/cmtpl/calcPremium"><div class="menu-inner">Sığorta haqqını hesabla</div></a>
+                            </div>
+                        </div>
+                    </div>
 
-<script>
-const sentences = [
-   { en: "Тогда она была́ гораздо краси́вее, чем сейчас" },
-  { en: "Он был ра́нен на войне́" },
-  { en: "Пе́ред тем как идти́ спать,запри́ окна" },
-  { en: "Я должен идти́?" },
-  { en: "Они обду́мывают,что де́лать дальше" },
-  { en: "Если даёшь,то давай быстро" },
-  { en: "Да́йте, пожалуйста, стака́н воды" },
-  { en: "Он посмотре́л на ночное не́бо" },
-  { en: "Мы все посмотре́ли в окно́" },
-  { en: "Дава́йте сде́лаем э́то как пе́рвый шаг" },
-  { en: "Я помню Ваше лицо́,но не помню Ваше и́мя" },
-  { en: "Оте́ц реши́л бро́сить кури́ть" },
-  { en: "Он легко реши́л э́ту зада́чу" },
-  { en: "Я не помню его и́мени" },
-  { en: "Мне нетрудно реши́ть э́ту пробле́му" },
-  { en: "Если даёшь,то давай быстро" },
-  { en: "Како́го цвета твой каранда́ш?" },
-  { en: "Я должен унасле́довать де́ло отца́" },
-  { en: "Мы до́лжны воспо́льзоваться ситуа́цией" },
-  { en: "Они не искупа́лись, потому что бы́ло холодно" }
-];
+                                        <div class="menu expandable ">
+                        <div class="menu-inner"><img src="https://services.isb.az/images/greenicon.png" alt="">Yaşıl Kart sığortası</div>
+                        <div class="sub-menus">
+                            <div class="menu ">
+                                <a href="https://services.isb.az/greencard/checkValidity"><div class="menu-inner">Yaşıl Kart müqaviləsini yoxla</div></a>
+                            </div>
+                        </div>
+                    </div>
 
-let correctSentence = "";
-let userSentence = [];
+                                        <div class="menu expandable ">
+                        <div class="menu-inner"><img src="https://services.isb.az/images/propicon.png" alt="">Daşınmaz Əmlakın icbari sığortası</div>
+                        <div class="sub-menus">
+                            <div class="menu ">
+                                <a href="https://services.isb.az/property/checkValidity"><div class="menu-inner">Sığorta müqaviləsini yoxla</div></a>
+                            </div>
+                        </div>
+                    </div>
 
-function nextSentence() {
-  userSentence = [];
-  document.getElementById('result').innerText = "";
-  const random = sentences[Math.floor(Math.random() * sentences.length)];
-  correctSentence = random.en;
-  const words = random.en.split(" ").sort(() => 0.5 - Math.random());
+                                        <div class="menu expandable ">
+                        <div class="menu-inner"><img src="https://services.isb.az/images/liabicon.png" alt="">Daşınmaz əmlak üzrə mülki məsuliyyətin icbari sığortası</div>
+                        <div class="sub-menus">
+                            <div class="menu ">
+                                <a href="https://services.isb.az/liability/checkValidity"><div class="menu-inner">Sığorta müqaviləsini yoxla</div></a>
+                            </div>
+                        </div>
+                    </div>
 
-  const wordsHTML = words.map(word =>
-    `<div class="word" onclick="addWord('${word}')">${word}</div>`
-  ).join("");
+                                        <div class="menu expandable ">
+                        <div class="menu-inner"><img src="https://services.isb.az/images/passicon.png" alt="">İcbari sərnişin sığortası</div>
+                        <div class="sub-menus">
+                            <div class="menu ">
+                                <a href="https://services.isb.az/passenger/checkValidity"><div class="menu-inner">Sığorta müqaviləsini yoxla</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-3" style="padding-left:0px; padding-right:0px">
 
-  document.getElementById('words').innerHTML = wordsHTML;
-  document.getElementById('sentence').innerText = "Cümləni qur: ";
-}
+                    <div class="block" style="border-radius:4px; padding:15px" align="center">
+                        <a href="https://www.facebook.com/www.isb.az" target="_new" class="facebook">
+                            <img src="https://services.isb.az/images/social_facebook.png" alt="" style="border-radius:5px; height:30px; width:30px"></a>
+                        <a href="//www.youtube.com/channel/UC3GknmLiYGQravgMoFYEOUA" target="_new" class="youtube">
+                            <img src="https://services.isb.az/images/social_youtube.png" alt="" style="border-radius:10px; height:30px; width:30px"></a>
+                        <a href="mailto:info@isb.az" class="mail">
+                            <img src="https://services.isb.az/images/social_mail.png" alt="" style="border-radius:10px; height:30px; width:30px"></a>
+                    </div>
 
-function addWord(word) {
-  userSentence.push(word);
-  document.getElementById('sentence').innerText = "Cümləni qur: " + userSentence.join(" ");
-}
+                    <div class="text-center mb-3"><a href="https://services.isb.az/statistics">Ziyarətçi statistikası</a></div>
+                </div>
+            </div>
+            <div class="main col-md-8 order-sm-first order-md-1">
+                   <div class="card">
+      <div class="card-header bg-isb">
+         İcbari avtoməsuliyyət sığortası üzrə müqaviləni yoxla
+      </div>
+      <div class="card-body">
+         <div class="row">
+            <div class="col-md-6">
+               <ul style="margin:0" class="col-md-12">
+                  <li class="form-group">
+                     <strong>Dövlət qeydiyyat nişanı:</strong>
+                      <div class="input-group">
+                         <div class="input-group-prepend">
+                             <span class="input-group-text">
+                                 <a id="docRegistrationNumber" class="img" href="https://services.isb.az/images/rn_small.jpg" onclick="return false">
+                                     <i class="material-icons">info</i>
+                                 </a>
+                             </span>
+                         </div>
+                         <input name="carNumber" type="text" id="txtRegistrationNumber" class="form-control input-group-lg" autocomplete="off">
+                         <div class="input-group-append">
+                             <span class="input-group-text">
+                                 <input type="radio" name="searchtype" value="carNumber" checked="checked">
+                             </span>
+                         </div>
+                     </div>
+                  </li>
+                  <li class="form-group">
+                     <strong>Müqavilənin nömrəsi:</strong>
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                             <span class="input-group-text">
+                                 <a id="docPolicyNumber" class="img" href="https://services.isb.az/images/policycmtpl.png" onclick="return false">
+                                     <i class="material-icons">info</i>
+                                 </a>
+                             </span>
+                          </div>
+                          <input name="policyNumber" type="text" id="txtPolicyNumber" class="form-control" autocomplete="off" disabled="disabled">
+                          <div class="input-group-append">
+                             <span class="input-group-text">
+                                 <input type="radio" name="searchtype" value="policyNumber">
+                             </span>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="form-group">
+                      <button onclick="return CheckValidity();" style="width: 100%" id="pageBody_btnCheck" class="btn btn-primary mt-2">
+                          Yoxla
+                          <div class="lds-roller loader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                      </button>
+                  </li>
+               </ul>
+            </div>
+            <div class="col-md-6">
+               <div class="block rounded" style="height:auto; padding:1em; margin-top:15px;text-align:justify;">
+                  Avtonəqliyyat vasitəsinin dövlət qeydiyyat nişanını <b><i>və ya</i></b> icbari sığorta müqaviləsinin nömrəsini müvafiq xanaya daxil etməklə icbari avtoməsuliyyət sığortası müqaviləsinin qüvvədə olub-olmamasını öyrənə bilərsiniz.
+                  <br><br>İcbari sığorta müqaviləsi üzrə sığorta haqqını hesablamaq üçün <a href="/cmtpl/calcPremium" target="_self">buradan</a> istifadə edə bilərsiniz.
+               </div>
+            </div>
+         </div>
+      </div>
+       <div id="divError" class="alert alert-danger" style="">
+           <span id="lblError" style="color:Red;font-weight:bold;">Dövlət qeydiyyat nişanını və ya şəhadətnamə nömrəsini daxil edin!</span>
+       </div>
+   </div>
+    <div class="result-area ">
+        <table width="100%">
+            <thead>
+            <tr>
+                <td>Təşkilat</td>
 
-function checkSentence() {
-  if (userSentence.join(" ") === correctSentence) {
-    document.getElementById('result').innerText = "✅ Doğru!";
-  } else {
-    document.getElementById('result').innerText = `❌ Səhv! Düzgün cümlə: "${correctSentence}"`;
-  }
-}
+                <td>Dövlət qeydiyyat nömrəsi</td>
+                <td>Marka</td>
+                <td>Model</td>
+                <td>Status</td>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+            </div>
+        </div>
+    </div>
 
-nextSentence();
-</script>
-</body>
+    <footer class="container mb-3">
+        <hr>
+        <div class="text-center">
+            <a href="https://isb.az" target="_blank" rel="dofollow" title="sığorta">İcbari Sığorta Bürosu</a> | Bütün hüquqları qorunur. &copy; 2016 - 2025 | 51
+        </div>
+    </footer>
+
+    <script src="https://services.isb.az/js/bundle.min.js?id=219aa6d17e176d43d485"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcE8bwaAAAAALW_yWFm_nLV8bIzJ-Lwslglmg4f"></script>
+    <script>
+        function getCaptchaResponse(callback=function(){}){
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LcE8bwaAAAAALW_yWFm_nLV8bIzJ-Lwslglmg4f', {action: 'service'}).then(function(token) {
+                    callback(token);
+                });
+            });
+        }
+    </script>
+        <script>
+
+        function CheckValidity() {
+            let carNumber = clearWhiteSpace($('[name="carNumber"]').val());
+            let policyNumber = clearWhiteSpace($('[name="policyNumber"]').val());
+            loader(1);
+            if(!isOneOkay(carNumber,policyNumber)) {
+                loader(0);
+                errorAction('Dövlət qeydiyyat nişanını və ya şəhadətnamə nömrəsini daxil edin!');
+            }
+            else{
+                let _token = $('#token').val();
+                callApi({
+                    service:encodeURIComponent('eyJpdiI6IlJTTm9XUVZsRVZmSlZhcjBiYk9PM1E9PSIsInZhbHVlIjoiRnNnV0ZHZlorR3lVYW9WN0RiWlc3Sm12eFFNMml4S3JHQjg3WTRZUFVXND0iLCJtYWMiOiIyNGE4OGZmNzVhMTUyZDExNGZiZDRiOTYyMTRjYzc1OGFiMTlhMWZiY2VmOTYyZmNjOTI2NzVlODliOWRkNTQ3In0='),
+                    isGreenCard:false,
+                    carNumber,
+                    policyNumber,
+                    _token
+                }, (result)=>{
+                    loader(0);
+                    if(typeof result==='string') result = JSON.parse(result);
+
+                    if(!result.response){
+                        errorAction('Xəta baş verdi. Zəhmət olmasa bir qədər sonra təkrar yoxlayın!');
+                        setResult(null);
+                    } else if(result.response.code==='MORE_3'){
+                        errorAction('Bu xidməti gün ərzində 3 dəfədən artıq istifadə edə bilməzsiniz');
+                        setResult(null);
+                    } else if(result.response.code==='99990' || result.response.code==='99999'){
+                        errorAction('Güvənlik sorğusu təsdiqlənməyib');
+                        setResult(null);
+                    } else if(result.response.code==="0182"){
+                        errorAction('Təhlükəsizlik (captcha) serverinə qoşularkən xəta baş verdi!');
+                        setResult(null);
+                    } else if(result.response.code!=="0"){
+                        errorAction('Xəta baş verdi. Zəhmət olmasa bir qədər sonra təkrar yoxlayın!');
+                        setResult(null);
+                    } else {
+                        let contracts = result.resultHash;
+                        setResult(null);
+                        let isArray = Array.isArray(contracts);
+                        if((isArray && contracts.length>0) || (!isArray && Object.keys(contracts).length>0)){
+                            let contractKeys = Object.keys(contracts);
+                            errorAction(null);
+                            let allData = '';
+                            contractKeys.forEach(function(contractKey){
+                                let contractValue = contracts[contractKey];
+                                let contractData = `
+                                    <tr>
+                                        <td>${contractValue.insurerName}</td>
+
+                                        <td>${contractValue.dqn}</td>
+                                        <td>${contractValue.make}</td>
+                                        <td>${contractValue.model}</td>
+                                        <td>${contractValue.policyStatus}</td>
+                                    </tr>
+                                `;
+                                allData+=contractData;
+                            });
+                            setResult(allData);
+                        }else{
+                            errorAction('Məlumat tapılmadı');
+                            setResult(null);
+                        }
+                    }
+                });
+            }
+        }
+
+    </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2R37K7FQLY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2R37K7FQLY');
+    </script>
+        </body>
 </html>
